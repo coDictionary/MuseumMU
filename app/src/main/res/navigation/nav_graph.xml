@@ -1,0 +1,37 @@
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment"> <fragment
+    android:id="@+id/loginFragment"
+    android:name="com.projectpmob.museummu.ui.auth.LoginFragment"
+    android:label="Login" />
+    <action
+        android:id="@+id/action_loginFragment_to_registerFragment"
+        app:destination="@id/registerFragment" />
+
+    <action
+        android:id="@+id/action_loginFragment_to_homeFragment"
+        app:destination="@id/homeFragment"
+        app:popUpTo="@id/loginFragment"
+        app:popUpToInclusive="true" />
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.projectpmob.museummu.ui.auth.RegisterFragment"
+        android:label="Register" />
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.projectpmob.museummu.ui.HomeFragment"
+        android:label="Home" />
+
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.projectpmob.museummu.ui.HistoryFragment"
+        android:label="Riwayat" />
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.projectpmob.museummu.ui.ProfileFragment"
+        android:label="Profil" />
+
+</navigation>

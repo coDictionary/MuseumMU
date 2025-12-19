@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "761050686250",
+    "project_id": "museum-b7fbf",
+    "storage_bucket": "museum-b7fbf.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:761050686250:android:fbd5daf43c8b819b20b453",
+        "android_client_info": {
+          "package_name": "com.farhan164.museum"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTZ9oTPm-ivhI4aI_WEsxRzkKXYaoJLFk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:761050686250:android:e8d873d13fcd885b20b453",
+        "android_client_info": {
+          "package_name": "com.projectpmob.museummu"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTZ9oTPm-ivhI4aI_WEsxRzkKXYaoJLFk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
