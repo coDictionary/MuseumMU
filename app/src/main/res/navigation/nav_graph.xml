@@ -1,10 +1,17 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/homeFragment"> <fragment
+    app:startDestination="@id/homeFragment">
+
+    <fragment
     android:id="@+id/loginFragment"
+        tools:layout="@layout/fragment_login"
     android:name="com.projectpmob.museummu.ui.auth.LoginFragment"
     android:label="Login" />
+    <action
+        android:id="@+id/action_registerFragment_to_loginFragment"
+        app:destination="@+id/loginFragment"/>
     <action
         android:id="@+id/action_loginFragment_to_registerFragment"
         app:destination="@id/registerFragment" />
@@ -14,24 +21,64 @@
         app:destination="@id/homeFragment"
         app:popUpTo="@id/loginFragment"
         app:popUpToInclusive="true" />
+
+    <fragment
+        android:id="@+id/orderFragment"
+        android:name="com.projectpmob.museummu.ui.order.OrderFragment"
+        android:label="Pesan Tiket"
+        />
     <fragment
         android:id="@+id/registerFragment"
         android:name="com.projectpmob.museummu.ui.auth.RegisterFragment"
+        tools:layout="@layout/fragment_register"
         android:label="Register" />
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.projectpmob.museummu.ui.HomeFragment"
+        android:name="com.projectpmob.museummu.ui.home.HomeFragment"
+        tools:layout="@layout/fragment_home"
         android:label="Home" />
+
 
     <fragment
         android:id="@+id/historyFragment"
-        android:name="com.projectpmob.museummu.ui.HistoryFragment"
-        android:label="Riwayat" />
+        android:name="com.projectpmob.museummu.ui.history.HistoryFragment"
+        android:label="Riwayat"
+        tools:layout="@layout/fragment_history">
+
+        <action
+            android:id="@+id/action_historyFragment_to_detailHistoryFragment"
+            app:destination="@id/detailHistoryFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/detailHistoryFragment"
+        android:name="com.projectpmob.museummu.ui.history.DetailHistoryFragment"
+        android:label="Detail Tiket"
+        tools:layout="@layout/fragment_detail_history">
+
+        <argument
+            android:name="ticketData"
+            app:argType="com.projectpmob.museummu.data.model.Ticket" />
+    </fragment>
 
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.projectpmob.museummu.ui.ProfileFragment"
-        android:label="Profil" />
+        android:name="com.projectpmob.museummu.ui.profile.ProfileFragment"
+        android:label="Profil"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_profileFragment_to_editProfileFragment"
+            app:destination="@id/editProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="EditProfileFragment"
+        android:label="EditProfile"
+        tools:layout="@layout/fragment_edit_profile">
+        <action
+            android:id="@+id/action_editProfileFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
 
 </navigation>

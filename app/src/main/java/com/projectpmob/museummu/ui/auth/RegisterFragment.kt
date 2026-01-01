@@ -46,6 +46,9 @@ class RegisterFragment : Fragment(R.layout.fragment_register) {
                 Toast.makeText(context, "Mohon lengkapi semua data!", Toast.LENGTH_SHORT).show()
             }
         }
+        binding.btnToLogin.setOnClickListener {
+            findNavController().navigate(R.id.action_loginFragment_to_registerFragment)
+        }
 
         // Aksi Text "Sudah punya akun? Login" (Opsional, jika ada tombol back di XML)
         // binding.tvBackToLogin.setOnClickListener {

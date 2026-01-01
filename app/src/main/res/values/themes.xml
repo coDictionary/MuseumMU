@@ -1,8 +1,23 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
     <style name="Base.Theme.MuseumMU" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+
+        <item name="colorPrimary">@color/museum_primary</item>
+        <item name="colorOnPrimary">@color/pure_white</item>
+        <item name="colorPrimaryContainer">@color/soft_cloud</item>
+        <item name="colorOnPrimaryContainer">@color/museum_primary</item>
+
+        <item name="colorSecondary">@color/solar_amber</item>
+        <item name="colorOnSecondary">@color/text_primary</item> <item name="colorSecondaryContainer">@color/solar_amber</item>
+        <item name="colorOnSecondaryContainer">@color/text_primary</item>
+
+        <item name="android:colorBackground">@color/soft_cloud</item>
+        <item name="colorSurface">@color/pure_white</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+        <item name="colorSurfaceVariant">@color/pure_white</item>
+        <item name="colorOnSurfaceVariant">@color/muted_text</item>
+
+        <item name="android:statusBarColor">@color/soft_cloud</item>
+        <item name="android:windowLightStatusBar">true</item> <item name="colorError">@color/error_red</item>
     </style>
 
     <style name="Theme.MuseumMU" parent="Base.Theme.MuseumMU" />

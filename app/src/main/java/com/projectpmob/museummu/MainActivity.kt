@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
         navController = navHostFragment.navController
 
         // Hubungkan BottomNav dengan NavController
-        binding.bottomNav.setupWithNavController(navController)
+        binding.bottomNavigation.setupWithNavController(navController)
 
         // LOGIC 1: Cek Session Login
         if (!sessionManager.isLogin()) {
@@ -43,13 +43,13 @@ class MainActivity : AppCompatActivity() {
         // LOGIC 2: Atur Visibilitas Bottom Nav
         navController.addOnDestinationChangedListener { _, destination, _ ->
             when (destination.id) {
-                R.id.loginFragment, R.id.registerFragment -> {
+                R.id.loginFragment, R.id.registerFragment, R.id.detailHistoryFragment, R.id.editProfileFragment -> {
                     // Sembunyikan Bottom Nav & Toolbar di halaman Auth
-                    binding.bottomNav.visibility = View.GONE
+                    binding.bottomNavigation.visibility = View.GONE
                 }
                 else -> {
                     // Tampilkan di Home, History, Profile
-                    binding.bottomNav.visibility = View.VISIBLE
+                    binding.bottomNavigation.visibility = View.VISIBLE
                 }
             }
         }
